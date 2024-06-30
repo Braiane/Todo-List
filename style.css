@@ -1,0 +1,144 @@
+/* Evité les débordrement et mise a 0 des marges  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* fond de la page + police d'écriture + taille du fond */
+body {
+    color: white;
+    background-image: repeating-linear-gradient(45deg, rgba(97,97,97,0.1) 0px, rgba(97,97,97,0.1) 2px,transparent 2px, transparent 4px),linear-gradient(90deg, rgb(43,43,43),rgb(43,43,43));
+    font-family: "Roboto", sans-serif;
+    min-height: 100vh;
+}
+
+/* Taille du texte du header */
+header{
+    font-size: 1.5rem;
+}
+
+/* Mettre les éléments du header et du form au milieux */
+header , form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*forme et taille du boutton pour ajouté des élrements a la todo list*/
+form input, form button {
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background-color: white;
+}
+
+/* Changrement de l'icone de la souris quand passé dessus + petite transition + couleur de fond blanc */
+form button {
+   background: white;
+   cursor: pointer;
+   transition: all 0.5s ease;
+
+}
+
+/* Parti pour le survole du bouton */
+form button:hover{
+    background: transparent;
+    color: white; 
+}
+
+.todo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list {
+    list-style: none;
+    min-width: 30%;
+}
+
+.todo {
+    margin: 0.5rem;
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.todo li{
+    flex: 1;
+}
+
+.delete-btn, .finish-btn {
+    background: yellow;
+    border: none;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.finish-btn {
+    background-color: limegreen;
+}
+
+.todo-item {
+    padding: 0rem 0.5rem;
+}
+
+.fa-trash, .fa-check{
+    pointer-events: none;
+}
+
+.complete {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+select{
+    -webkit-apperance: none;
+    -moz-appeareance: none;
+    outline: none;
+    box-shadow: none;
+    appearance: none;
+    border: none;
+}
+
+.select{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+select {
+    background: white;
+    color: black;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.select::after{
+    content: "\25BC";
+    position: absolute;
+    background: gray;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.select:hover::after{
+    background: white;
+    color: black;
+}

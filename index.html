@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+    />
+    <title>To-do List</title>
+  </head>
+  <body>
+    <header><h1>To-do List</h1></header>
+
+    <!-- Bouton pour ajouté des éléments a la todo list -->
+    <form>
+      <input type="text" class="todo-input" />
+      <button class="todo-button" type="submit">
+        <i class="fa-solid fa-square-plus"></i>
+      </button>
+      <div class="select">
+        <select name="todos" class="filtre">
+            <option value="toute">Toutes</option>
+            <option value="completer">Fini</option>
+            <option value="afaire">A faire</option>
+        </select>
+      </div>
+    </form>
+    
+    <!-- Div qui contiendra tout les éléments qu'on ajouteras -->
+    <div class="todo-container">
+        <!-- Pas de <li> car ils vont être crée quand on va crée des chose a faire -->
+        <ul class="todo-list"></ul> 
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
